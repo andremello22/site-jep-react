@@ -8,18 +8,19 @@ export default function Cabecalho() {
     return (
         <header
             id="cabecalho"
-            className="bg-gradient-to-r from-indigo-600 to-pink-500 shadow-md sticky top-0 z-[9999]"
+            className="bg-gradient-to-r from-indigo-600 to-pink-500 shadow-md sticky top-0 z-[9999] m-0 p-0"
         >
-            <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div className="container mx-auto  flex justify-between items-center  m-0 p-0">
 
                 {/* Logo e Nome */}
                 <div className="flex items-center gap-4 min-w-fit">
                     <Link to="/" aria-label="Ir para a página inicial">
                         <img
-                            src="./src/assets/logo.jpg"
+                            src="./src/assets/logo.png"
                             alt="Logo da J&P Impressoras"
                             loading="lazy"
-                            className="w-20 h-10 rounded-lg object-contain bg-white/20 p-1"
+                            className="w-40 h-20 object-contain p-1 "
+                               
                         />
                     </Link>
 
