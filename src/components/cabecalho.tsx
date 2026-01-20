@@ -8,23 +8,23 @@ export default function Cabecalho() {
     return (
         <header
             id="cabecalho"
-            className="bg-gradient-to-r from-indigo-600 to-pink-500 shadow-md sticky top-0 z-[9999] m-0 p-0"
+            className="w-full bg-gradient-to-r from-indigo-600 to-pink-500 shadow-md sticky top-0 z-[9999]"
         >
-            <div className="container mx-auto  flex justify-between items-center  m-0 p-0">
+            <div className=" max-w-7xl mx-auto flex justify-between items-center p-0 m-0 px-4 sm:px-6 lg:px-8">
 
                 {/* Logo e Nome */}
-                <div className="flex items-center gap-4 min-w-fit">
+                <div className="flex items-center gap-4 min-w-fit flex-shrink-0">
                     <Link to="/" aria-label="Ir para a página inicial">
                         <img
                             src="./src/assets/logo.png"
                             alt="Logo da J&P Impressoras"
                             loading="lazy"
-                            className="w-40 h-20 object-contain p-1 "
+                            className="w-28 h-14 sm:w-32 sm:h-16 lg:w-40 lg:h-20 object-contain p-1"
                                
                         />
                     </Link>
 
-                    <h1 className="text-white text-2xl font-bold tracking-tight whitespace-nowrap">
+                    <h1 className="text-white text-lg sm:text-xl lg:text-2xl font-bold tracking-tight whitespace-nowrap">
                         J&P <span className="font-light text-indigo-100">Impressoras</span>
                     </h1>
 
