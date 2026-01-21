@@ -8,9 +8,9 @@ export default function Cabecalho() {
     return (
         <header
             id="cabecalho"
-            className="w-full bg-gradient-to-r from-indigo-600 to-pink-500 shadow-md sticky top-0 z-[9999]"
+            className=" w-full  bg-gradient-to-r from-indigo-600 to-pink-500 shadow-md sticky top-0 z-[9999]"
         >
-            <div className=" max-w-7xl mx-auto flex justify-between items-center p-0 m-0 px-4 sm:px-6 lg:px-8">
+            <div className="  max-w-7xl mx-auto flex justify-around items-center p-4px-4 sm:px-6 lg:px-8  h-20">
 
                 {/* Logo e Nome */}
                 <div className="flex items-center gap-4 min-w-fit flex-shrink-0">
@@ -24,9 +24,7 @@ export default function Cabecalho() {
                         />
                     </Link>
 
-                    <h1 className="text-white text-lg sm:text-xl lg:text-2xl font-bold tracking-tight whitespace-nowrap">
-                        J&P <span className="font-light text-indigo-100">Impressoras</span>
-                    </h1>
+                   
 
 
                     
@@ -35,13 +33,13 @@ export default function Cabecalho() {
                 
 
                 {/* Navegação */}
-                <nav className="flex items-center">
+                <nav className="flex justify-between items-center pl-4 pr-4">
                     {/* Desktop */}
-                    <div className="hidden lg:block">
-                        <ul className="flex items-center gap-8">
-                            <li><Link to="/" className="text-white hover:text-indigo-200 transition-colors font-medium">Home</Link></li>
-                            <li><Link to="/servicos" className="text-white hover:text-indigo-200 transition-colors font-medium">Serviços</Link></li>
-                            <li><Link to="/sobre" className="text-white hover:text-indigo-200 transition-colors font-medium">Sobre nós</Link></li>
+                    <div className="hidden lg:block pl-4 pr-4">
+                        <ul className="flex items-center gap-8 pl-4 pr-4">
+                            <li className='pl-4 pr-8'><Link to="/" className="text-white hover:text-indigo-200 transition-colors font-medium">Home</Link></li>
+                            <li className='pl-4 pr-8'><Link to="/servicos" className="text-white hover:text-indigo-200 transition-colors font-medium">Serviços</Link></li>
+                            <li className='pl-4 pr-8'><Link to="/sobre" className="text-white hover:text-indigo-200 transition-colors font-medium">Sobre nós</Link></li>
                         </ul>
                     </div>
 

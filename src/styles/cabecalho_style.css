@@ -1,6 +1,6 @@
 
 @import "tailwindcss";
 
-h1{
+.letra-cabecalho {
     letter-spacing: 0.60rem;
 }
