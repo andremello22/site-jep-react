@@ -4,3 +4,13 @@
 .letra-cabecalho {
     letter-spacing: 0.60rem;
 }
+
+
+
+
+
+/* Garante que o conteúdo fique acima do overlay */
+#cabecalho > * {
+    position: relative;
+    z-index: 1;
+}
