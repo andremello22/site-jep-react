@@ -9,10 +9,10 @@ export default function Formulario() {
         className=" grid grid-cols-1 md:grid-cols-2
         gap-4
         w-full max-w-3xl
-        p-10  rounded-xl"
+        p-5  rounded-xl"
       >
         
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-3 mr-4 ml-4">
           <label htmlFor="nome" className="text-sm font-medium">
             Nome / Empresa
           </label>
@@ -26,7 +26,7 @@ export default function Formulario() {
           />
         </div>
 
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-3 mr-4 ml-4">
           <label htmlFor="telefone" className="text-sm font-medium">
             Telefone
           </label>
@@ -38,7 +38,7 @@ export default function Formulario() {
             required
             className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
-                 <div className="flex items-center gap-2">
+                 <div className="flex items-center gap-3 mr-4 ml-4">
                         <input
                             id="whats"
                             type="checkbox"
@@ -55,7 +55,7 @@ export default function Formulario() {
                 </div>
         </div>
 
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-3 mr-4 ml-4">
           <label htmlFor="email" className="text-sm font-medium">
             Email
           </label>
@@ -69,7 +69,7 @@ export default function Formulario() {
           />
         </div>
 
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-3 mr-4 ml-4">
           <label htmlFor="servico" className="text-sm font-medium">
             Serviço desejado
           </label>

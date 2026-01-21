@@ -54,14 +54,15 @@ export default function Home() {
             </div>
 
             
-            <div className='  p-10   gap-10'>
-                <div className='flex justify-center  p-10'>
+            <div className=' p-10   '>
+                <div className='w-full  justify-center ml-1  p-10'>
                     <Cards>
                          <h3 className='bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>Entre em contato conosco agora mesmo</h3>
 
                         <Formulario />
                     </ Cards>
                 </div>
+
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-10'>
 
                    
