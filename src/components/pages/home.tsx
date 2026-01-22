@@ -3,6 +3,9 @@ import Cards from '../cards';
 import Formulario from '../formulario';
 
 export default function Home() {
+    const mensagemWhatsApp = "Olá, vim pelo site. Gostaria de mais informações sobre os serviços oferecidos pela J&P Impressoras.";
+    const numeroWhatsApp = "55999999999";
+
     return (
         <div className="flex flex-col w-full  ">
             <div className=' bg-blue-900 p-2 faixa-topo border-t-1'>
@@ -67,6 +70,7 @@ export default function Home() {
 
                    
                         <Cards className="h-32 sm:h-40 lg:h-48">
+                            <a href={`https://wa.me/55999999999?text=${mensagemWhatsApp}`} target='_blank' rel='noopener noreferrer'>
                              <h3 className='bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>Manutenção de Impressoras</h3>
 
                             <img
@@ -76,8 +80,10 @@ export default function Home() {
                             loading="lazy"
                             className="w-full h-full object-cover"
                             />
+                            </a>
                         </Cards>
                         <Cards className="h-32 sm:h-40 lg:h-48">
+                                <a href={`https://wa.me/55999999999?text=${mensagemWhatsApp}`} target='_blank' rel='noopener noreferrer'>
                                 <h3 className='bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>Manutenção de Redes</h3>
 
                                 <img
@@ -87,8 +93,10 @@ export default function Home() {
                             loading="lazy"
                             className="w-full h-full object-cover "
                             />
+                            </a>
                         </Cards>
                         <Cards className="h-32 sm:h-40 lg:h-48">
+                            <a href={`https://wa.me/55999999999?text=${mensagemWhatsApp}`} target='_blank' rel='noopener noreferrer'>
                             <h3 className='bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>manutenção de microcomputadores e notebooks</h3>
 
                             <img
@@ -97,11 +105,13 @@ export default function Home() {
                             loading="lazy"
                             className="w-full h-full object-cover"
                             />
+                            </a>
                         </Cards>
                     
                 </div>
             </div>
-            faixa de img
+            <div className=' w-full class-faixa-imp'></div>
+           
             <div className='border grid grid-cols-4 p-10'>
                 <div className='border'>parceiros</div>
                 <div className="border">parceiros</div>

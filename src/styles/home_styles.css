@@ -22,3 +22,12 @@
   border-right: 40px solid transparent;
   border-top: 20px solid #1e3a8a;
 }
+
+.class-faixa-imp {
+  height: 8px;
+  background-image: url("../assets/impressoras.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 300px;
+  margin: 24px 0;
+} 
