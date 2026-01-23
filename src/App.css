@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
 
+@font-face {
+  font-family: 'Anton';
+  src: url('/src/fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 #root {
   width: 100%;
   margin: 0;
@@ -8,6 +15,7 @@
   text-align: center;
 }
 body {
+  font-family: "Anton", sans-serif;
   margin: 0;
   min-height: 100vh;
   position: relative;

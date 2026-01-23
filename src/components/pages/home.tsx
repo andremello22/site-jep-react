@@ -15,7 +15,8 @@ export default function Home() {
                 <div className='flex justify-center gap-4 mt-2 '>
                     <span>contatos: </span>
                         <span ><a className=' inline-block
-                                font-medium
+                                underline
+                                text-sm
                                 text-white-700
                                 transition-all
                                 duration-300
@@ -28,7 +29,8 @@ export default function Home() {
                                 target='_blank' 
                                 rel='noopener noreferrer'>whatssapp: (21) 9 9999-9999</a></span>
                     <span ><a className=' inline-block
-                                font-medium
+                                underline
+                                text-sm
                                 text-white-700
                                 transition-all
                                 duration-300
@@ -40,7 +42,8 @@ export default function Home() {
                                  href="tel:55999999999"  
                                  rel='noopener noreferrer'>tel: (21) 9 9999-9999</a></span>
                     <span ><a className=' inline-block
-                                font-medium
+                                underline
+                                text-sm
                                 text-white-700
                                 transition-all
                                 duration-300
@@ -71,8 +74,11 @@ export default function Home() {
                    
                         <Cards className="h-32 sm:h-40 lg:h-48">
                             <a href={`https://wa.me/55999999999?text=${mensagemWhatsApp}`} target='_blank' rel='noopener noreferrer'>
-                             <h3 className='bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>Manutenção de Impressoras</h3>
-
+                             <h3 className='h-1/7 bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>Manutenção de Impressoras</h3>
+                                <p className='h-30 text-start text-black m-2 text-sm'> Realizamos manutenção preventiva e corretiva em impressoras jato de tinta e
+  laser, garantindo melhor qualidade de impressão, maior durabilidade dos
+  equipamentos e redução de custos com paradas inesperadas. Agende uma visita
+  técnica e mantenha sua impressora sempre em perfeito funcionamento.</p>
                             <img
                             
                             src="src\assets\manutencao-imp.jpg"
@@ -84,7 +90,13 @@ export default function Home() {
                         </Cards>
                         <Cards className="h-32 sm:h-40 lg:h-48">
                                 <a href={`https://wa.me/55999999999?text=${mensagemWhatsApp}`} target='_blank' rel='noopener noreferrer'>
-                                <h3 className='bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>Manutenção de Redes</h3>
+                                <h3 className='h-1/7 bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>Manutenção de Redes</h3>
+                                    <p className="h-30 text-start text-black m-2 text-sm">
+                                    Projetamos, configuramos e realizamos manutenção em redes cabeadas e Wi-Fi,
+                                    garantindo conexão estável, segura e de alto desempenho. Evite quedas de
+                                    internet e problemas de comunicação — conte com um suporte técnico
+                                    especializado.
+                                    </p>
 
                                 <img
 
@@ -97,7 +109,13 @@ export default function Home() {
                         </Cards>
                         <Cards className="h-32 sm:h-40 lg:h-48">
                             <a href={`https://wa.me/55999999999?text=${mensagemWhatsApp}`} target='_blank' rel='noopener noreferrer'>
-                            <h3 className='bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>manutenção de microcomputadores e notebooks</h3>
+                            <h3 className='h-1/7 bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>manutenção de microcomputadores e notebooks</h3>
+                            <p className="h-30 text-start text-black m-2 text-sm">
+                            Fazemos manutenção preventiva e corretiva em desktops e notebooks para
+                            melhorar o desempenho, evitar travamentos e prolongar a vida útil dos
+                            equipamentos. Mantenha seu computador rápido, seguro e pronto para o dia a
+                            dia.
+                            </p>
 
                             <img
                             src="src\assets\manutencao-notebook.jpg"
