@@ -26,7 +26,7 @@ function Layout() {
                 bg-green-500
                 hover:bg-green-600
                 text-white
-                p-4
+                p-3
                 rounded-full
                 shadow-lg
                 transition
@@ -34,7 +34,7 @@ function Layout() {
                 hover:scale-110
             "
             >
-            <i className="fab fa-whatsapp text-2xl"></i>
+            <img className="w-10 h-10 hover:scale-110 transition" src="./src/assets/iconWhats.svg" alt="" />
             </a>
 
         </main>
