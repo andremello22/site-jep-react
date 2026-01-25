@@ -12,7 +12,7 @@ export default function Cards({ children }: any) {
         mx-auto
 
         bg-gradient-to-r 
-        from-indigo-600 
+        from-indigo-300
         to-pink-500 
         p-[2px]
         rounded-xl

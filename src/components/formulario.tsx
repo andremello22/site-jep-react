@@ -2,7 +2,7 @@ import '../styles/formulario_styles.css';
 
 export default function Formulario() {
   return (
-    <div className="flex justify-center  w-full rounded-xl bg-white">
+    <div className="flex items-center justify-center w-full rounded-xl bg-white">
 
       <form
         id="formulario"
@@ -44,7 +44,7 @@ export default function Formulario() {
                             type="checkbox"
                             name="whats"
                             value="sim"
-                            className="w-4 h-4 accent-indigo-600"
+                            className="w-4 h-4 accent-indigo-600 accent-purple-500/25"
                         />
                         <label
                             htmlFor="whats"

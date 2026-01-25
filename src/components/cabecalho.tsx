@@ -6,9 +6,10 @@ export default function Cabecalho() {
     const [open, setOpen] = useState(false);
 
     return (
+        <>
         <header
             id="cabecalho"
-            className=" w-full  bg-gradient-to-r from-indigo-600 to-pink-500 shadow-md sticky top-0 z-[9999]"
+            className=" w-full p-3  bg-gradient-to-r from-indigo-600 to-pink-500 shadow-md sticky top-0 z-[9999]"
         >
             <div className="  max-w-7xl mx-auto flex justify-around items-center p-4px-4 sm:px-6 lg:px-8  h-20">
 
@@ -81,5 +82,62 @@ export default function Cabecalho() {
                 </ul>
             </div>
         </header>
+        <div className='w-full h-[3px] bg-gradient-to-r from-pink-600 to-indigo-500'></div>
+         <div className=' bg-blue-900 p-2 faixa-topo  shadow-md shadow-indigo-900/50'>
+                       
+                                <h1 className='font-medium text-2xl'>Bem vindos à J&P impressoras</h1>
+                                <p>Trabalhando por você.</p>
+                                <p>Conheça os nossos serviços, entre em contato com a nossa equipe 
+                                    para mais informações e orçamentos.</p>
+                                
+                            <div className='flex justify-center gap-4 mt-2 '>
+                                <span>contatos: </span>
+                                    <span ><a className=' inline-block
+                                            underline
+                                            text-md
+                                            text-white-700
+                                            transition-all
+                                            duration-300
+                                            hover:bg-gradient-to-r
+                                            hover:from-indigo-600
+                                            hover:to-pink-500
+                                            hover:bg-clip-text
+                                            hover:text-transparent' 
+                                            href="https://wa.me/55999999999" 
+                                            target='_blank' 
+                                            rel='noopener noreferrer'>whatssapp: (21) 9 9999-9999</a></span>
+                                <span ><a className=' inline-block
+                                            underline
+                                            text-md
+                                            text-white-700
+                                            transition-all
+                                            duration-300
+                                            hover:bg-gradient-to-r
+                                            hover:from-indigo-600
+                                            hover:to-pink-500
+                                            hover:bg-clip-text
+                                            hover:text-transparent' 
+                                            href="tel:55999999999"  
+                                            rel='noopener noreferrer'>tel: (21) 9 9999-9999</a></span>
+                                <span ><a className=' inline-block
+                                            underline
+                                            text-md
+                                            text-white-700
+                                            transition-all
+                                            duration-300
+                                            hover:bg-gradient-to-r
+                                            hover:from-indigo-600
+                                            hover:to-pink-500
+                                            hover:bg-clip-text
+                                            hover:text-transparent' 
+                                            href="mailto:2EYVw@example.com"  
+                                            rel='noopener noreferrer'>email: 2EYVw@example.com</a></span>
+                            </div>
+        
+        
+                    </div>
+        
+        
+        </>
     );
 }

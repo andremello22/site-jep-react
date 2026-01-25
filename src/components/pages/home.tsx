@@ -8,62 +8,16 @@ export default function Home() {
 
     return (
         <div className="flex flex-col w-full  ">
-            <div className=' bg-blue-900 p-2 faixa-topo border-t-1'>
-                
-                    <h1 className='font-medium text-2xl'>Bem vindos à J&P impressoras</h1>
-                    <p>Trabalhando por você.</p>
-                <div className='flex justify-center gap-4 mt-2 '>
-                    <span>contatos: </span>
-                        <span ><a className=' inline-block
-                                underline
-                                text-sm
-                                text-white-700
-                                transition-all
-                                duration-300
-                                hover:bg-gradient-to-r
-                                hover:from-indigo-600
-                                hover:to-pink-500
-                                hover:bg-clip-text
-                                hover:text-transparent' 
-                                href="https://wa.me/55999999999" 
-                                target='_blank' 
-                                rel='noopener noreferrer'>whatssapp: (21) 9 9999-9999</a></span>
-                    <span ><a className=' inline-block
-                                underline
-                                text-sm
-                                text-white-700
-                                transition-all
-                                duration-300
-                                hover:bg-gradient-to-r
-                                hover:from-indigo-600
-                                hover:to-pink-500
-                                hover:bg-clip-text
-                                hover:text-transparent' 
-                                 href="tel:55999999999"  
-                                 rel='noopener noreferrer'>tel: (21) 9 9999-9999</a></span>
-                    <span ><a className=' inline-block
-                                underline
-                                text-sm
-                                text-white-700
-                                transition-all
-                                duration-300
-                                hover:bg-gradient-to-r
-                                hover:from-indigo-600
-                                hover:to-pink-500
-                                hover:bg-clip-text
-                                hover:text-transparent' 
-                                 href="mailto:2EYVw@example.com"  
-                                 rel='noopener noreferrer'>email: 2EYVw@example.com</a></span>
-                </div>
-
-
-            </div>
-
+           
             
-            <div className=' p-10   '>
-                <div className='w-full  justify-center ml-1  p-10'>
-                    <Cards>
-                         <h3 className='bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>Entre em contato conosco agora mesmo</h3>
+            <div className=' p-10 flex-col w-full justify-center items-center '>
+                <div className='"w-full max-w-4xl mx-auto px-4 md:px-10'>
+                    <Cards className="grid grid-cols-1 md:grid-cols-2
+                                        gap-4
+                                        w-full
+                                        p-5
+                                        rounded-xl">
+                        <h3 className='bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>Entre em contato conosco agora mesmo</h3>
 
                         <Formulario />
                     </ Cards>
@@ -129,13 +83,105 @@ export default function Home() {
                 </div>
             </div>
             <div className=' w-full class-faixa-imp'></div>
-           
-            <div className='border grid grid-cols-4 p-10'>
-                <div className='border'>parceiros</div>
-                <div className="border">parceiros</div>
-                <div className="border">parceiros</div>
-                <div className="border">parceiros</div>
+
+
+            <div className='box-content w-full mt-10  '>
+                <div className="flex justify-center">
+                        <div className="w-1/2 grid place-items-center bg-purple-800 rounded-tr-full rounded-bl-full border-[2px] border-indigo-400 p-10 mb-6 mt-6 shadow-md shadow-indigo-400/50">
+                            <h3 className="text-6xl  z-[9] text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-pink-400">Nossos Parceiros</h3>
+                        </div>
+                </div>
+            <div className='grid grid-cols-4'>
+                
+                <div className=' m-1 p-2'>
+                    <Cards className="h-32 sm:h-40 lg:h-48">
+                            <img
+                            src="src\assets\hp.jfif"
+                            alt="logo hp"
+                            loading="lazy"
+                            className="w-full h-32 object-cover"
+                            />
+                    </Cards>
+                </div>
+                <div className="m-1 p-2">
+                    <Cards className="h-32 sm:h-40 lg:h-48">
+                            <img
+                            src="src\assets\epson.png"
+                            alt="logo epson"
+                            loading="lazy"
+                            className="w-full h-32  object-cover"
+                            />
+                    </Cards>
+                </div>
+                <div className="m-1 p-2">
+                    <Cards className="h-32 sm:h-40 lg:h-48">
+                            <img
+                            src="src\assets\canon.png"
+                            alt="logo canon"
+                            loading="lazy"
+                            className="w-full h-32  object-cover"
+                            />
+                    </Cards>
+                </div>
+                <div className="m-1 p-2">
+                    <Cards className="h-32 sm:h-40 lg:h-48">
+                            <img
+                            src="src\assets\brother.png"
+                            alt="logo brother"
+                            loading="lazy"
+                            className="w-full h-32 object-cover"
+                            />
+                    </Cards>
+                </div>
+
+                <div className="m-1 p-2">
+                    <Cards className="h-32 sm:h-40 lg:h-48">
+                            <img
+                            src="src\assets\kyocera.png"
+                            alt="logo kyocera"
+                            loading="lazy"
+                            className="w-full h-32 object-cover"
+                            />
+                    </Cards>
+                </div>
+
+                <div className="m-1 p-2">
+                    <Cards className="h-32 sm:h-40 lg:h-48">
+                            <img
+                            src="src\assets\lexmark.png"
+                            alt="logo lexmark"
+                            loading="lazy"
+                            className="w-full h-32 object-cover"
+                            />
+                    </Cards>
+                </div>
+
+                <div className="m-1 p-2">
+                    <Cards className="h-32 sm:h-40 lg:h-48">
+                            <img
+                            src="src\assets\ricoh.png"
+                            alt="logo ricoh"
+                            loading="lazy"
+                            className="w-full h-32 object-cover"
+                            />
+                    </Cards>
+                </div>
+
+
+                
+                <div className="m-1 p-2">
+                    <Cards className="h-32 sm:h-40 lg:h-48">
+                            <img
+                            src="src\assets\konica.png"
+                            alt="logo konica"
+                            loading="lazy"
+                            className="w-full h-32 object-cover"
+                            />
+                    </Cards>
+                </div>
+
             </div>
+          </div>
         </div>
        
     )

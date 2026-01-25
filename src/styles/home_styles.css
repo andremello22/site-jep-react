@@ -1,28 +1,5 @@
 @import "tailwindcss";
 
-.faixa-topo {
-  position: relative;
-  background: #1e3a8a; /* azul que combinamos */
-  color: #fff;
-  padding: 16px 24px;
-}
-
-/* ponta de flecha */
-.faixa-topo::after {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  
-  width: 0;
-  height: 0;
-
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-top: 20px solid #1e3a8a;
-}
-
 .class-faixa-imp {
   height: 8px;
   background-image: url("../assets/impressoras.png");
