@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import '../styles/cabecalho_style.css';
 import { Link } from 'react-router-dom';
+import {Contatos} from "../components/typtes/interfaces";
 
 export default function Cabecalho() {
     const [open, setOpen] = useState(false);
-
+    const contatos = Contatos
     return (
         <>
         <header
@@ -103,9 +104,9 @@ export default function Cabecalho() {
                                             hover:to-pink-500
                                             hover:bg-clip-text
                                             hover:text-transparent' 
-                                            href="https://wa.me/55999999999" 
+                                            href={contatos.wa} 
                                             target='_blank' 
-                                            rel='noopener noreferrer'>whatssapp: (21) 9 9999-9999</a></span>
+                                            rel='noopener noreferrer'>whatssapp: {contatos.wa}</a></span>
                                 <span ><a className=' inline-block
                                             underline
                                             text-md
@@ -117,8 +118,8 @@ export default function Cabecalho() {
                                             hover:to-pink-500
                                             hover:bg-clip-text
                                             hover:text-transparent' 
-                                            href="tel:55999999999"  
-                                            rel='noopener noreferrer'>tel: (21) 9 9999-9999</a></span>
+                                            href={contatos.cel}
+                                            rel='noopener noreferrer'>{contatos.cel}</a></span>
                                 <span ><a className=' inline-block
                                             underline
                                             text-md
@@ -130,8 +131,8 @@ export default function Cabecalho() {
                                             hover:to-pink-500
                                             hover:bg-clip-text
                                             hover:text-transparent' 
-                                            href="mailto:2EYVw@example.com"  
-                                            rel='noopener noreferrer'>email: 2EYVw@example.com</a></span>
+                                            href={contatos.link_email}  
+                                            rel='noopener noreferrer'>email: {contatos.email}</a></span>
                             </div>
         
         

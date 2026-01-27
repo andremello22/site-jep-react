@@ -1,10 +1,20 @@
 import '../../styles/home_styles.css';
 import Cards from '../cards';
 import Formulario from '../formulario';
+import { type formulrio, Contatos } from '../typtes/interfaces';
+import { useState } from 'react';
 
 export default function Home() {
-    const mensagemWhatsApp = "Olá, vim pelo site. Gostaria de mais informações sobre os serviços oferecidos pela J&P Impressoras.";
-    const numeroWhatsApp = "55999999999";
+    
+    const initFormulario :formulrio = {
+        nome : "",
+        telefone : 0,
+        wa : false,
+        email : "",
+        servico : ""
+    }
+    const[formulario, setFormualio] = useState<formulrio>(initFormulario)
+
 
     return (
         <div className="flex flex-col w-full  ">
@@ -27,7 +37,7 @@ export default function Home() {
 
                    
                         <Cards className="h-32 sm:h-40 lg:h-48">
-                            <a href={`https://wa.me/55999999999?text=${mensagemWhatsApp}`} target='_blank' rel='noopener noreferrer'>
+                            <a href={`https://wa.me/55999999999?text=${ Contatos.msgwa}`} target='_blank' rel='noopener noreferrer'>
                              <h3 className='h-1/7 bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>Manutenção de Impressoras</h3>
                                 <p className='h-30 text-start text-black m-2 text-sm'> Realizamos manutenção preventiva e corretiva em impressoras jato de tinta e
   laser, garantindo melhor qualidade de impressão, maior durabilidade dos
@@ -43,7 +53,7 @@ export default function Home() {
                             </a>
                         </Cards>
                         <Cards className="h-32 sm:h-40 lg:h-48">
-                                <a href={`https://wa.me/55999999999?text=${mensagemWhatsApp}`} target='_blank' rel='noopener noreferrer'>
+                                <a href={`https://wa.me/55999999999?text=${ Contatos.msgwa}`} target='_blank' rel='noopener noreferrer'>
                                 <h3 className='h-1/7 bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>Manutenção de Redes</h3>
                                     <p className="h-30 text-start text-black m-2 text-sm">
                                     Projetamos, configuramos e realizamos manutenção em redes cabeadas e Wi-Fi,
@@ -62,7 +72,7 @@ export default function Home() {
                             </a>
                         </Cards>
                         <Cards className="h-32 sm:h-40 lg:h-48">
-                            <a href={`https://wa.me/55999999999?text=${mensagemWhatsApp}`} target='_blank' rel='noopener noreferrer'>
+                            <a href={`https://wa.me/55999999999?text=${ Contatos.msgwa}`} target='_blank' rel='noopener noreferrer'>
                             <h3 className='h-1/7 bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>manutenção de microcomputadores e notebooks</h3>
                             <p className="h-30 text-start text-black m-2 text-sm">
                             Fazemos manutenção preventiva e corretiva em desktops e notebooks para

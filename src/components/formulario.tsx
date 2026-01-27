@@ -45,7 +45,7 @@ export default function Formulario() {
                             type="checkbox"
                             name="whats"
                             value="sim"
-                            className="w-4 h-4 accent-indigo-600 accent-purple-500/25"
+                            className="w-4 h-4 accent-indigo-600 accent-purple-500"
                         />
                         <label
                             htmlFor="whats"
@@ -87,7 +87,7 @@ export default function Formulario() {
         whileHover={{scale:1.1}}
         whileTap={{scale:0.95}}
           type="submit"
-          className="mt-4 bg-gradient-to-r from-indigo-600 to-pink-500 text-white py-2 rounded-md font-semibold "
+          className="mt-4 bg-purple-600 text-white py-2 rounded-md font-semibold "
         >
           Enviar
         </motion.button>
