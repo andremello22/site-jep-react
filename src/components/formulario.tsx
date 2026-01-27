@@ -1,4 +1,5 @@
 import '../styles/formulario_styles.css';
+import { motion } from 'motion/react';
 
 export default function Formulario() {
   return (
@@ -82,12 +83,14 @@ export default function Formulario() {
           />
         </div>
 
-        <button
+        <motion.button
+        whileHover={{scale:1.1}}
+        whileTap={{scale:0.95}}
           type="submit"
-          className="mt-4 bg-gradient-to-r from-indigo-600 to-pink-500 text-white py-2 rounded-md font-semibold hover:opacity-90 transition"
+          className="mt-4 bg-gradient-to-r from-indigo-600 to-pink-500 text-white py-2 rounded-md font-semibold "
         >
           Enviar
-        </button>
+        </motion.button>
       </form>
     </div>
   );
