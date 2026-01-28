@@ -1,7 +1,9 @@
+import { AnimacaoScroll } from "./utils/animacaoScroll";
 
 export default function Cards({ children }: any) {
   return (
-    <div
+    
+    <AnimacaoScroll
       className="
         w-full
         max-w-sm
@@ -31,6 +33,8 @@ export default function Cards({ children }: any) {
       <div className="w-full h-full bg-white rounded-xl overflow-hidden">
         {children}
       </div>
-    </div>
+    </AnimacaoScroll>
+ 
+  
   );
 }
