@@ -40,8 +40,8 @@ export default function Cabecalho() {
                     <div className="hidden lg:block pl-4 pr-4">
                         <ul className="flex items-center gap-8 pl-4 pr-4">
                             <li className='pl-4 pr-8'><Link to="/" className="text-white hover:text-indigo-200 transition-colors font-medium">Home</Link></li>
-                            <li className='pl-4 pr-8'><Link to="/servicos" className="text-white hover:text-indigo-200 transition-colors font-medium">Serviços</Link></li>
-                            <li className='pl-4 pr-8'><Link to="/sobre" className="text-white hover:text-indigo-200 transition-colors font-medium">Sobre nós</Link></li>
+                            <li className='pl-4 pr-8'><Link to="/pages/servicos" className="text-white hover:text-indigo-200 transition-colors font-medium">Serviços</Link></li>
+                            <li className='pl-4 pr-8'><Link to="/pages/sobre" className="text-white hover:text-indigo-200 transition-colors font-medium">Sobre nós</Link></li>
                         </ul>
                     </div>
 
@@ -78,8 +78,8 @@ export default function Cabecalho() {
             >
                 <ul className="flex flex-col p-4 space-y-4 text-center">
                     <li><Link to="/" className="text-white block py-2">Home</Link></li>
-                    <li><Link to="/servicos" className="text-white block py-2">Serviços</Link></li>
-                    <li><Link to="/sobre" className="text-white block py-2">Sobre nós</Link></li>
+                    <li><Link to="/pages/servicos" className="text-white block py-2">Serviços</Link></li>
+                    <li><Link to="/pages/sobre" className="text-white block py-2">Sobre nós</Link></li>
                 </ul>
             </div>
         </header>
