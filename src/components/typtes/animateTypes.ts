@@ -1,9 +1,7 @@
-
 export type AnimacaoScrollProps = {
   children: React.ReactNode;
   className?: string;
 };
-
 
 export const variants = {
   hidden: {
@@ -13,6 +11,5 @@ export const variants = {
   visible: {
     opacity: 1,
     y: 0,
-    className: ""
   },
 };
