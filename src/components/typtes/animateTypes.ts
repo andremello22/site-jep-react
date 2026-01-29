@@ -6,10 +6,10 @@ export type AnimacaoScrollProps = {
 export const variants = {
   hidden: {
     opacity: 0,
-    y: 40,
+    x: -80,
   },
   visible: {
     opacity: 1,
-    y: 0,
+    x: 0,
   },
 };
