@@ -74,10 +74,9 @@ export default function Formulario() {
           <label htmlFor="servico" className="text-sm font-medium">
             Serviço desejado
           </label>
-          <input
+          <textarea
             id="servico"
             name="servico"
-            type="text"
             placeholder="Manutenção, recarga, aluguel..."
             className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
