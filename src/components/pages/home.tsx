@@ -1,7 +1,7 @@
 import '../../styles/home_styles.css';
 import Cards from '../cards';
 import Formulario from '../formulario';
-import { type formulrio, Contatos } from '../typtes/interfaces';
+import {type formulrio, Contatos } from '../../typtes/interfaces';
 import { useState } from 'react';
 
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
 
                    
                         <Cards className="h-32 sm:h-40 lg:h-48">
-                            <a href={`https://wa.me/55999999999?text=${ Contatos.mensagem_wa}`} target='_blank' rel='noopener noreferrer'>
+                            <a href={`https://wa.me/55999999999?text=${Contatos.mensagem_wa}`} target='_blank' rel='noopener noreferrer'>
                              <h3 className='h-1/7 bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>Manutenção de Impressoras</h3>
                                 <p className='h-30 text-start text-black m-2 text-sm'> Realizamos manutenção preventiva e corretiva em impressoras jato de tinta e
   laser, garantindo melhor qualidade de impressão, maior durabilidade dos
@@ -45,7 +45,7 @@ export default function Home() {
   técnica e mantenha sua impressora sempre em perfeito funcionamento.</p>
                             <img
                             
-                            src="src\assets\manutencao-imp.jpg"
+                            src="/public/assets/manutencao-imp.jpg"
                             alt="manutenção de impressoras"
                             loading="lazy"
                             className="w-full h-full object-cover"
@@ -64,7 +64,7 @@ export default function Home() {
 
                                 <img
 
-                            src="src\assets\manutencao-redes.jpg"
+                            src="/public/assets/manutencao-redes.jpg"
                             alt="manutenção de redes"
                             loading="lazy"
                             className="w-full h-full object-cover "
@@ -82,7 +82,7 @@ export default function Home() {
                             </p>
 
                             <img
-                            src="src\assets\manutencao-notebook.jpg"
+                            src="/public/assets/manutencao-notebook.jpg"
                             alt="manutenção de microcomputadores"
                             loading="lazy"
                             className="w-full h-full object-cover"
@@ -105,75 +105,89 @@ export default function Home() {
                 
                 <div className=' m-1 p-2'>
                     <Cards className="h-32 sm:h-40 lg:h-48">
+                            <a href="https://www.hp.com/br-pt" target='_blank' rel='noopener noreferrer'>
                             <img
-                            src="src\assets\hp.jfif"
+                            src="/public/assets/hp.jfif"
                             alt="logo hp"
                             loading="lazy"
                             className="w-full h-32 object-cover"
                             />
+                            </a>
                     </Cards>
                 </div>
                 <div className="m-1 p-2">
                     <Cards className="h-32 sm:h-40 lg:h-48">
+                            <a href="https://www.epson.com.br" target='_blank' rel='noopener noreferrer'>
                             <img
-                            src="src\assets\epson.png"
+                            src="/public/assets/epson.png"
                             alt="logo epson"
                             loading="lazy"
                             className="w-full h-32  object-cover"
                             />
+                            </a>
                     </Cards>
                 </div>
                 <div className="m-1 p-2">
                     <Cards className="h-32 sm:h-40 lg:h-48">
+                            <a href="https://www.canon.com.br" target='_blank' rel='noopener noreferrer'>
                             <img
-                            src="src\assets\canon.png"
+                            src="/public/assets/canon.png"
                             alt="logo canon"
                             loading="lazy"
                             className="w-full h-32  object-cover"
                             />
+                            </a>
                     </Cards>
                 </div>
                 <div className="m-1 p-2">
                     <Cards className="h-32 sm:h-40 lg:h-48">
+                            <a href="https://www.brother.com.br" target='_blank' rel='noopener noreferrer'>
                             <img
-                            src="src\assets\brother.png"
+                            src="/public/assets/brother.png"
                             alt="logo brother"
                             loading="lazy"
                             className="w-full h-32 object-cover"
                             />
+                            </a>
                     </Cards>
                 </div>
 
                 <div className="m-1 p-2">
                     <Cards className="h-32 sm:h-40 lg:h-48">
+                            <a href="https://brazil.kyocera.com/" target='_blank' rel='noopener noreferrer'>
                             <img
-                            src="src\assets\kyocera.png"
+                            src="/public/assets/kyocera.png"
                             alt="logo kyocera"
                             loading="lazy"
                             className="w-full h-32 object-cover"
                             />
+                            </a>
                     </Cards>
                 </div>
 
                 <div className="m-1 p-2">
                     <Cards className="h-32 sm:h-40 lg:h-48">
+                            <a href="https://www.lexmark.com/pt_br.html" target='_blank' rel='noopener noreferrer'>
                             <img
-                            src="src\assets\lexmark.png"
+                            src="/public/assets/lexmark.png"
                             alt="logo lexmark"
                             loading="lazy"
                             className="w-full h-32 object-cover"
                             />
+                            </a>
                     </Cards>
                 </div>
 
                 <div className="m-1 p-2">
                     <Cards className="h-32 sm:h-40 lg:h-48">
+                            <a href="https://www.ricoh-americalatina.com/pt-br" target='_blank' rel='noopener noreferrer'>
                             <img
-                            src="src\assets\ricoh.png"
+                            src="/public/assets/ricoh.png"
                             alt="logo ricoh"
                             loading="lazy"
                             className="w-full h-32 object-cover"
                             />
+                            </a>
                     </Cards>
                 </div>
 
@@ -181,12 +195,14 @@ export default function Home() {
                 
                 <div className="m-1 p-2">
                     <Cards className="h-32 sm:h-40 lg:h-48">
+                            <a href="https://www.konicaminolta.com/br-pt/index.html" target='_blank' rel='noopener noreferrer'>
                             <img
-                            src="src\assets\konica.png"
+                            src="/public/assets/konica.png"
                             alt="logo konica"
                             loading="lazy"
                             className="w-full h-32 object-cover"
                             />
+                            </a>
                     </Cards>
                 </div>
 

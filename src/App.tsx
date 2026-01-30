@@ -11,8 +11,8 @@ function App() {
       
       <Routes>
         <Route element={<Layout />} >
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<Navigate to="/" />} /> 
+          <Route path="/" element={<Navigate to="/pages/home" replace />} />
+          <Route path="/pages/home" element={<Home />} /> 
           <Route path="/pages/servicos" element={<Servicos />} />
           <Route path='/pages/sobre' element={<Sobre />} />
         </Route>

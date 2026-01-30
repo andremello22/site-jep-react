@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../styles/cabecalho_style.css';
 import { Link } from 'react-router-dom';
-import {Contatos} from "../components/typtes/interfaces";
+import {Contatos} from "../typtes/interfaces";
 
 export default function Cabecalho() {
     const [open, setOpen] = useState(false);
@@ -18,7 +18,7 @@ export default function Cabecalho() {
                 <div className="flex items-center gap-4 min-w-fit flex-shrink-0">
                     <Link to="/" aria-label="Ir para a página inicial">
                         <img
-                            src="./src/assets/logo.png"
+                            src="/public/assets/logo.png"
                             alt="Logo da J&P Impressoras"
                             loading="lazy"
                             className="w-28 h-14 sm:w-32 sm:h-16 lg:w-40 lg:h-20 object-contain p-1"
