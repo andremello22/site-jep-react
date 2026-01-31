@@ -17,10 +17,9 @@
 
 .faixa-topo {
   position: relative;
-  background: #0b1738; /* azul que combinamos */
+  background: #08012b; /* azul que combinamos */
   color: #fff;
   padding: 16px 24px;
-  border-bottom: #072a8a solid 4px;
 }
 
 /* ponta de flecha */
@@ -37,6 +36,6 @@
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
   
-  border-top: 20px solid #0b1738;
+  border-top: 20px solid  #08012b;
 }
 

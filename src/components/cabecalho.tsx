@@ -8,7 +8,7 @@ export default function Cabecalho() {
     const [open, setOpen] = useState(false);
     const contatos = Contatos
     return (
-        <>
+    <>
         <header
             id="cabecalho"
             className=" w-full p-3  bg-gradient-to-r from-indigo-600 to-pink-500 shadow-md sticky top-0 z-[9999]"
@@ -40,9 +40,9 @@ export default function Cabecalho() {
                     {/* Desktop */}
                     <div className="hidden lg:block pl-4 pr-4">
                         <ul className="flex items-center gap-8 pl-4 pr-4">
-                            <li className='pl-4 pr-8'><Link to="/" className="text-white hover:text-indigo-200 transition-colors font-medium">Home</Link></li>
-                            <li className='pl-4 pr-8'><Link to="/pages/servicos" className="text-white hover:text-indigo-200 transition-colors font-medium">Serviços</Link></li>
-                            <li className='pl-4 pr-8'><Link to="/pages/sobre" className="text-white hover:text-indigo-200 transition-colors font-medium">Sobre nós</Link></li>
+                            <li className='pl-4 pr-8'><Link to="/" className="text-white hover:text-indigo-200 transition-colors text-2xl">Home</Link></li>
+                            <li className='pl-4 pr-8'><Link to="/pages/servicos" className="text-white hover:text-indigo-200 transition-colors text-2xl">Serviços</Link></li>
+                            <li className='pl-4 pr-8'><Link to="/pages/sobre" className="text-white hover:text-indigo-200 transition-colors text-2xl">Sobre nós</Link></li>
                         </ul>
                     </div>
 
@@ -78,27 +78,28 @@ export default function Cabecalho() {
                 className={`${open ? 'block' : 'hidden'} lg:hidden bg-indigo-700 border-t border-white/10`}
             >
                 <ul className="flex flex-col p-4 space-y-4 text-center">
-                    <li><Link to="/" className="text-white block py-2">Home</Link></li>
-                    <li><Link to="/pages/servicos" className="text-white block py-2">Serviços</Link></li>
-                    <li><Link to="/pages/sobre" className="text-white block py-2">Sobre nós</Link></li>
+                    <li><Link to="/" className="text-white block py-2 text-2xl">Home</Link></li>
+                    <li><Link to="/pages/servicos" className="text-white block py-2 text-2xl">Serviços</Link></li>
+                    <li><Link to="/pages/sobre" className="text-white block py-2 text-2xl">Sobre nós</Link></li>
                 </ul>
             </div>
         </header>
-        <div className='w-full h-[3px] bg-gradient-to-r from-pink-600 to-indigo-500'></div>
-         <div className=' bg-blue-900 p-2 faixa-topo  shadow-md shadow-indigo-900/50'>
+         <div className=' bg-indigo-600  faixa-topo  shadow-md shadow-indigo-900/50'>
                        
                                 <h1 className='font-medium text-xl
+                                mt-5
                                 sm:text-2xl
                                 md:text-3xl
                                 lg:text-4xl
                                 xl:text-4xl'>Bem vindos à J&P impressoras</h1>
-                                <p>Trabalhando por você.</p>
+                                <p className='mt-2'>Trabalhando por você.</p>
                                 <p>Conheça os nossos serviços, entre em contato com a nossa equipe 
                                     para mais informações e orçamentos.</p>
                                 
-                            <div className=' justify-center gap-4 mt-2 p-2'>
+                            <div className='mt-2 justify-center gap-4 mt-2 p-2'>
                                 <span>contatos:</span>
-                                    <span className=' m-2' ><a className=' inline-block
+                                    <span className=' m-2' >
+                                    <a className=' inline-block
                                             
                                            
                                             underline

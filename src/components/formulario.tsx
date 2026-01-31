@@ -10,11 +10,12 @@ export default function Formulario() {
         className=" grid grid-cols-1 md:grid-cols-2
         gap-4
         w-full max-w-3xl
-        p-5  rounded-xl"
+        p-5  rounded-xl text-md"
+        
       >
         
         <div className="flex flex-col gap-3 mr-4 ml-4">
-          <label htmlFor="nome" className="text-sm font-medium">
+          <label htmlFor="nome" className="text-md">
             Nome / Empresa
           </label>
           <input
@@ -28,7 +29,7 @@ export default function Formulario() {
         </div>
 
         <div className="flex flex-col gap-3 mr-4 ml-4">
-          <label htmlFor="telefone" className="text-sm font-medium">
+          <label htmlFor="telefone" className="text-md">
             Telefone
           </label>
           <input
@@ -49,7 +50,7 @@ export default function Formulario() {
                         />
                         <label
                             htmlFor="whats"
-                            className="text-sm font-medium cursor-pointer"
+                            className="text-md font-medium cursor-pointer"
                         >
                             Esse número é meu WhatsApp
                         </label>
@@ -57,7 +58,7 @@ export default function Formulario() {
         </div>
 
         <div className="flex flex-col gap-3 mr-4 ml-4">
-          <label htmlFor="email" className="text-sm font-medium">
+          <label htmlFor="email" className="text-md ">
             Email
           </label>
           <input
@@ -71,7 +72,7 @@ export default function Formulario() {
         </div>
 
         <div className="flex flex-col gap-3 mr-4 ml-4">
-          <label htmlFor="servico" className="text-sm font-medium">
+          <label htmlFor="servico" className="text-md ">
             Serviço desejado
           </label>
           <textarea

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-.class-faixa-imp {
+.faixa-imp {
   height: 8px;
   background-image: url("../assets/impressoras.png");
   background-size: contain;

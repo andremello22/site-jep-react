@@ -3,42 +3,55 @@ import {brother, canon, epson, hp, kyocera, lexmark, ricoh, konica, manutencao_i
 import { AnimacaoScroll } from '../utils/animacaoScroll.tsx';
 import Cards from '../cards';
 import Formulario from '../formulario';
-import {type formulrio, Contatos } from '../../typtes/interfaces';
+import {type formulario, Contatos } from '../../typtes/interfaces';
 import { useState } from 'react';
 
 export default function Home() {
     
-    const initFormulario :formulrio = {
+    const initFormulario :formulario = {
         nome : "",
         telefone : 0,
         wa : false,
         email : "",
         servico : ""
     }
-    const[formulario, setFormualio] = useState<formulrio>(initFormulario)
+    const[formulario, setFormulario] = useState<formulario>(initFormulario)
 
 
     return (
         <div className="flex flex-col w-full  ">
            
             
-            <div className=' p-10 flex-col w-full justify-center items-center '>
+            <div className=' p-10 flex-col flex w-full justify-center items-center '>
                 <div className='"w-full max-w-4xl mx-auto px-4 md:px-10'>
                     <Cards className="grid grid-cols-1 md:grid-cols-2
                                         gap-4
                                         w-full
                                         p-5
                                         rounded-xl">
-                        <h3 className='bg-gradient-to-r from-indigo-600 to-pink-500 text-white p-2 rounded-t-md p-2'>Entre em contato conosco agora mesmo</h3>
+                        <h3 className="flex
+                            items-center
+                            justify-center
+                            h-1/4
+                            text-xl
+                            sm:text-2xl
+                            bg-gradient-to-r
+                            from-indigo-600
+                            to-pink-500
+                            text-white
+                            p-3
+                            rounded-t-md
+                            text-center
+                            ">Entre em contato conosco agora mesmo</h3>
 
                         <Formulario />
                     </ Cards>
                 </div>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-10'>
+                <div className='flex flex-col sm:flex-row lg:flex-row gap-6 p-10'>
 
                    
-                      <Cards className="h-auto">
+                      <Cards className="h-auto min-h-[380px]">
                         <a
                             href={`https://wa.me/55999999999?text=${Contatos.mensagem_wa}`}
                             target="_blank"
@@ -91,7 +104,7 @@ export default function Home() {
                             </p>
                         </a>
                         </Cards>
-                        <Cards className="h-32 sm:h-40 lg:h-48">
+                        <Cards className="h-auto min-h-[380px]">
                                 <a href={`https://wa.me/55999999999?text=${ Contatos.mensagem_wa}`} target='_blank' rel='noopener noreferrer'>
                                   <h3 className=" flex
                                     items-center
@@ -116,24 +129,28 @@ export default function Home() {
                                     className="w-full h-full object-cover "
                                     />
                                 </div>
-                                    <p className="flex-1
-                                    sm:line-clamp-4
-                                    lg:line-clamp-5
-                                    text-black
-                                    text-sm
-                                    sm:text-base
-                                    p-4
-                                    text-justify">
+                               
+                                    <p className="
+                                    flex-1
+                                    z-[1]
+                                    overflow-y-visible
+                                        text-black
+                                        text-sm
+                                        sm:text-base
+                                        p-4
+                                        text-justify
+                                        sm:line-clamp-4
+                                        lg:line-clamp-5
+                                            
+                                    ">
                                     Projetamos, configuramos e realizamos manutenção em redes cabeadas e Wi-Fi,
-                                    garantindo conexão estável, segura e de alto desempenho. Evite quedas de
-                                    internet e problemas de comunicação — conte com um suporte técnico
-                                    especializado.
+                                    garantindo conexão estável, segura e de alto desempenho.
                                     </p>
-
+                                    
                                
                             </a>
                         </Cards>
-                        <Cards className="h-32 sm:h-40 lg:h-48">
+                        <Cards className="h-auto min-h-[380px]">
                             <a href={`https://wa.me/55999999999?text=${ Contatos.mensagem_wa}`} target='_blank' rel='noopener noreferrer'>
                             <h3 className='
                                     h-1/4
@@ -150,7 +167,7 @@ export default function Home() {
                             src={manutencao_notebook}
                             alt="manutenção de microcomputadores"
                             loading="lazy"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover "
                             />
                             </div>
                             <p className="
@@ -164,8 +181,7 @@ export default function Home() {
                                     text-justify">
                             Fazemos manutenção preventiva e corretiva em desktops e notebooks para
                             melhorar o desempenho, evitar travamentos e prolongar a vida útil dos
-                            equipamentos. Mantenha seu computador rápido, seguro e pronto para o dia a
-                            dia.
+                            equipamentos. 
                             </p>
                             
                             </a>
@@ -173,9 +189,9 @@ export default function Home() {
                     
                 </div>
             </div>
-                <div className="w-full  sm:px-6">
+                <div className="w-full   sm:px-6">
 
-                    <AnimacaoScroll>
+                    <AnimacaoScroll className='mt-5'>
                             <h2
                                 className="
                                 text-white
@@ -186,7 +202,7 @@ export default function Home() {
                                 sm:text-2xl
                                 md:text-3xl
                                 lg:text-4xl
-                                xl:text-5xl
+                                xl:text-4xl
 
                                
                                 sm:p-5
@@ -194,10 +210,11 @@ export default function Home() {
                                 lg:p-7
 
                                 bg-gradient-to-r
-                                from-indigo-600
-                                to-pink-500
+                                from-indigo-600/70
+                                to-pink-500/70
                                 backdrop-blur-sm
                                 rounded-tr-full
+                                
                                 "
                             >
                                 A 10 anos no mercado fornecendo soluções inteligentes
@@ -206,6 +223,7 @@ export default function Home() {
                          <AnimacaoScroll>
                             <h2
                                 className="
+                                 
                                 text-white
                                 font-semibold
                                 text-center
@@ -214,14 +232,14 @@ export default function Home() {
                                 sm:text-2xl
                                 md:text-3xl
                                 lg:text-4xl
-                                xl:text-5xl
+                                xl:text-4xl
 
                                 p-4
                                 sm:p-5
                                 md:p-6
                                 lg:p-7
 
-                                bg-purple-800
+                                bg-purple-800/70
 
                                 
                                 backdrop-blur-sm
@@ -233,6 +251,9 @@ export default function Home() {
                             <AnimacaoScroll>
                             <h2
                                 className="
+                                border-b-indigo-400
+                                 shadow-t-lg
+                                shadow-indigo-400/50
                                 block
                                 text-white
                                 font-semibold
@@ -242,14 +263,14 @@ export default function Home() {
                                 sm:text-2xl
                                 md:text-3xl
                                 lg:text-4xl
-                                xl:text-5xl
+                                xl:text-4xl
 
                                 p-4
                                 sm:p-5
                                 md:p-6
                                 lg:p-7
 
-                                bg-indigo-800
+                                bg-indigo-800/70
                                 rounded-bl-full
                                
                                 shadow-lg
@@ -265,7 +286,9 @@ export default function Home() {
                 <div className="w-full mt-10 px-3 sm:px-6 lg:px-10 mb-10">
 
                      {/* Título */}
-                    <div className="flex justify-center mb-8">
+                    <AnimacaoScroll>
+                    <div className="flex justify-center mb-8 mt-5">
+                       
                         <div
                         className="
                             w-full
@@ -275,7 +298,7 @@ export default function Home() {
 
                             grid place-items-center
 
-                            bg-purple-800
+                            bg-purple-800/30
                             rounded-tr-full
                             rounded-bl-full
 
@@ -311,7 +334,9 @@ export default function Home() {
                             Nossos Parceiros
                         </h3>
                         </div>
+                        
                     </div>
+                    </AnimacaoScroll>
 
                     {/* Grid Logos */}
                     <div
