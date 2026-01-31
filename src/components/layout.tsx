@@ -1,4 +1,5 @@
 import Cabecalho from "./cabecalho" 
+import icoWhats from "../assets/iconWhats.svg"
 import Rodape from "./rodape"
 import { Outlet } from "react-router-dom";
 
@@ -34,7 +35,7 @@ function Layout() {
                 hover:scale-110
             "
             >
-            <img className="w-10 h-10 hover:scale-110 transition" src="/public/assets/iconWhats.svg" alt="" />
+            <img className="w-10 h-10 hover:scale-110 transition" src={icoWhats} alt="" />
             </a>
 
         </main>

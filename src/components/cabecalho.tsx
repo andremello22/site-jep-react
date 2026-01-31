@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../styles/cabecalho_style.css';
+import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 import {Contatos} from "../typtes/interfaces";
 
@@ -18,7 +19,7 @@ export default function Cabecalho() {
                 <div className="flex items-center gap-4 min-w-fit flex-shrink-0">
                     <Link to="/" aria-label="Ir para a página inicial">
                         <img
-                            src="/public/assets/logo.png"
+                            src={logo}
                             alt="Logo da J&P Impressoras"
                             loading="lazy"
                             className="w-28 h-14 sm:w-32 sm:h-16 lg:w-40 lg:h-20 object-contain p-1"
@@ -86,14 +87,20 @@ export default function Cabecalho() {
         <div className='w-full h-[3px] bg-gradient-to-r from-pink-600 to-indigo-500'></div>
          <div className=' bg-blue-900 p-2 faixa-topo  shadow-md shadow-indigo-900/50'>
                        
-                                <h1 className='font-medium text-2xl'>Bem vindos à J&P impressoras</h1>
+                                <h1 className='font-medium text-xl
+                                sm:text-2xl
+                                md:text-3xl
+                                lg:text-4xl
+                                xl:text-4xl'>Bem vindos à J&P impressoras</h1>
                                 <p>Trabalhando por você.</p>
                                 <p>Conheça os nossos serviços, entre em contato com a nossa equipe 
                                     para mais informações e orçamentos.</p>
                                 
-                            <div className='flex justify-center gap-4 mt-2 '>
-                                <span>contatos: </span>
-                                    <span ><a className=' inline-block
+                            <div className=' justify-center gap-4 mt-2 p-2'>
+                                <span>contatos:</span>
+                                    <span className=' m-2' ><a className=' inline-block
+                                            
+                                           
                                             underline
                                             text-md
                                             text-white-700
@@ -107,7 +114,7 @@ export default function Cabecalho() {
                                             href={contatos.wa} 
                                             target='_blank' 
                                             rel='noopener noreferrer'>whatssapp: {contatos.wa}</a></span>
-                                <span ><a className=' inline-block
+                                <span className='m-2'><a className=' inline-block
                                             underline
                                             text-md
                                             text-white-700
@@ -119,8 +126,8 @@ export default function Cabecalho() {
                                             hover:bg-clip-text
                                             hover:text-transparent' 
                                             href={contatos.cel}
-                                            rel='noopener noreferrer'>{contatos.cel}</a></span>
-                                <span ><a className=' inline-block
+                                            rel='noopener noreferrer'>tel: {contatos.cel}</a></span>
+                                <span className='m-2'><a className=' inline-block
                                             underline
                                             text-md
                                             text-white-700
