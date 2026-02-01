@@ -2,26 +2,29 @@
 
 
 @font-face {
-  font-family: 'Anton';
-  src: url('/src/fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Montserrat';
+  src: url('/src/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/src/fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf') format('truetype');
+}
 #root {
   width: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
 }
-body {
-  font-family: "Anton", sans-serif;
-  margin: 0;
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
+body h1, h2 {
+  font-family: "Montserrat", sans-serif;
+;
 }
 
+body{
+  font-family:'Open Sans', sans-serif; 
+}
 body::before {
   content: "";
   position: fixed;
