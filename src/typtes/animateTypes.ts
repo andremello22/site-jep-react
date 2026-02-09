@@ -1,3 +1,4 @@
+
 export type AnimacaoScrollProps = {
   children: React.ReactNode;
   className?: string;

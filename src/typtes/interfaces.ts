@@ -21,7 +21,7 @@ export  const Contatos = {
 
 export interface formulario{
     nome:string;
-    telefone:number;
+    telefone:string;
     wa:boolean;
     email:string;
     servico:string;

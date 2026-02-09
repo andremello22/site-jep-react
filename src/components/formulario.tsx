@@ -1,7 +1,26 @@
 import '../styles/formulario_styles.css';
 import { motion } from 'motion/react';
+import { useState } from 'react';
+import { useMask } from '@react-input/mask';
+import type { formulario } from '../typtes/interfaces';
+
 
 export default function Formulario() {
+
+  
+const inputMaskRef = useMask({
+  mask: '(__) _____-_____',
+  replacement : {_: /\d/},
+});
+
+  const [formulario, setFormulario] = useState<formulario>({
+    nome: '',
+    telefone: '',
+    wa: false,
+    email: '',
+    servico: '',
+  });
+
   return (
     <div className="flex items-center justify-center w-full rounded-xl bg-white">
 
@@ -21,6 +40,8 @@ export default function Formulario() {
           <input
             id="nome"
             name="nome"
+            value={formulario.nome}
+            onChange={(e) => setFormulario({ ...formulario, nome: e.target.value })}
             type="text"
             placeholder="Digite seu nome ou empresa"
             required
@@ -33,8 +54,11 @@ export default function Formulario() {
             Telefone
           </label>
           <input
+            ref={inputMaskRef}
             id="telefone"
             name="telefone"
+            value={formulario.telefone}
+            onChange={(e) => setFormulario({ ...formulario, telefone: e.target.value })}
             type="tel"
             placeholder="(21) 99999-9999"
             required
@@ -45,6 +69,7 @@ export default function Formulario() {
                             id="whats"
                             type="checkbox"
                             name="whats"
+                            onChange={(e) => setFormulario({ ...formulario, wa: e.target.checked })}
                             value="sim"
                             className="w-4 h-4 accent-indigo-600 accent-purple-500"
                         />
@@ -65,6 +90,8 @@ export default function Formulario() {
             id="email"
             name="email"
             type="email"
+            value={formulario.email}
+            onChange={(e) => setFormulario({ ...formulario, email: e.target.value })}
             placeholder="seu@email.com"
             required
             className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -78,6 +105,8 @@ export default function Formulario() {
           <textarea
             id="servico"
             name="servico"
+            value={formulario.servico}
+            onChange={(e) => setFormulario({ ...formulario, servico: e.target.value })}
             placeholder="Manutenção, recarga, aluguel..."
             className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />

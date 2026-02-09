@@ -8,14 +8,7 @@ import { useState } from 'react';
 
 export default function Home() {
     
-    const initFormulario :formulario = {
-        nome : "",
-        telefone : 0,
-        wa : false,
-        email : "",
-        servico : ""
-    }
-    const[formulario, setFormulario] = useState<formulario>(initFormulario)
+   
 
 
     return (
