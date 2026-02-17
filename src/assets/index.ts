@@ -9,6 +9,7 @@ import konica from "./konica.png";
 import manutencao_imp from './manutencao_imp.jpg';
 import manutencao_redes from './manutencao_redes.jpg';
 import manutencao_notebook from './manutencao_notebook.jpg';
+import logo from './logo.png';
 
 export {
   manutencao_imp,
@@ -22,4 +23,5 @@ export {
   lexmark,
   ricoh,
   konica,
+  logo
 };

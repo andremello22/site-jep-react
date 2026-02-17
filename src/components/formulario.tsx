@@ -8,13 +8,22 @@ import type { formulario } from '../typtes/interfaces';
 
 export default function Formulario() {
 
-const { register, handleSubmit, formState: { errors } } = useForm<formulario>({
- mode: "all"
+const { register, handleSubmit, formState: { errors }, reset } = useForm<formulario>({
+ mode: "all",
+ 
+  defaultValues: {
+    nome: '',
+    telefone: '',
+    wa: false,
+    email: '',
+    servico: '',
+  },
 });
 
 const onsubmit = (data: formulario) => {
   console.log(data);
   // Aqui você pode adicionar a lógica para enviar os dados do formulário para um servidor ou API
+  reset() // Limpa o formulário após o envio
 }
   
 const inputMaskRef: any = useMask({
@@ -39,27 +48,27 @@ const inputMaskRef: any = useMask({
         
         <div className="flex flex-col gap-3 mr-4 ml-4">
           <label htmlFor="nome" className="text-md">
-            Nome / Empresa
+            Nome / Empresa <span className="text-red-500 font-bold">*</span>
           </label>
           <input
             id="nome"
-            {...register('nome', { required:true })}
+            {...register('nome', { required:'O nome é obrigatório.', maxLength:{ value: 100, message: 'O nome deve ter no máximo 100 caracteres.' } })}
             type='text'
             placeholder="Digite seu nome ou empresa"
             
             className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
-          {errors.nome && <span className="text-red-500 text-sm ml-4">O nome é obrigatório.</span>}
+          {errors.nome && <span className="text-red-500 text-sm ml-4">{errors.nome.message}</span>}
         </div>
        
 
         <div className="flex flex-col gap-3 mr-4 ml-4">
           <label htmlFor="telefone" className="text-md">
-            Telefone
+            Telefone <span className="text-red-500 font-bold">*</span>
           </label>
           <input
             id="telefone"
-            {...register('telefone', { required:true })}
+            {...register('telefone', { required:"O telefone é obrigatório.", maxLength: { value: 25, message: 'O telefone deve ter no máximo 25 caracteres.' } })}
             ref={(e) => {
             register("telefone").ref(e);
             inputMaskRef.current = e;
@@ -70,7 +79,7 @@ const inputMaskRef: any = useMask({
            
             className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
-          {errors.telefone && <span className="text-red-500 text-sm ml-4">O telefone é obrigatório.</span>}
+          {errors.telefone && <span className="text-red-500 text-sm ml-4">{errors.telefone.message}</span>}
                  <div className="flex items-center gap-3 mr-4 ml-4">
                         <input
                             id="whats"
@@ -90,14 +99,14 @@ const inputMaskRef: any = useMask({
 
         <div className="flex flex-col gap-3 mr-4 ml-4">
           <label htmlFor="email" className="text-md ">
-            Email
+            Email <span className="text-red-500 font-bold">*</span>
           </label>
           <input
             id="email"
            
             type="text"
            
-            {...register('email', { required:true, 
+            {...register('email', { required: "O email é obrigatório.", maxLength:{value: 100, message: 'O email deve ter no máximo 100 caracteres.'  },
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                 message: "Formato de Email inválido"
@@ -112,15 +121,15 @@ const inputMaskRef: any = useMask({
 
         <div className="flex flex-col gap-3 mr-4 ml-4">
           <label htmlFor="servico" className="text-md ">
-            Serviço desejado
+            Serviço desejado <span className="text-red-500 font-bold">*</span>
           </label>
           <textarea
             id="servico"
-            {...register('servico', { required:true })}
+            {...register('servico', { required: "O serviço desejado é obrigatório.", maxLength:{value: 500, message: 'O serviço desejado deve ter no máximo 500 caracteres.'  } })}
             placeholder="Manutenção, recarga, aluguel..."
             className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
-          {errors.servico && <span className="text-red-500 text-sm ml-4">O serviço desejado é obrigatório.</span>}
+          {errors.servico && <span className="text-red-500 text-sm ml-4">{errors.servico.message}</span>}
         </div>
 
         <motion.button
