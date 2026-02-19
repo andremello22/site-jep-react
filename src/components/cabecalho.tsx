@@ -1,12 +1,21 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import '../styles/cabecalho_style.css';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 import {Contatos} from "../typtes/interfaces";
 
 export default function Cabecalho() {
+    const location = useLocation();
+    const [activeLink, setActiveLink] = useState(location.pathname);
+
+    useEffect(() => {
+        setActiveLink(location.pathname);
+    }, [location]);
+    
     const [open, setOpen] = useState(false);
-    const contatos = Contatos
+    const contatos = Contatos;
     return (
     <>
         <header
@@ -28,7 +37,7 @@ export default function Cabecalho() {
                     </Link>
 
                    
-
+                        <h2>{}</h2>
 
                     
                 </div>
@@ -40,9 +49,9 @@ export default function Cabecalho() {
                     {/* Desktop */}
                     <div className="hidden lg:block pl-4 pr-4">
                         <ul className="flex items-center gap-8 pl-4 pr-4">
-                            <li className='pl-4 pr-8'><Link to="/" className="text-white hover:text-indigo-200 transition-colors text-2xl">Home</Link></li>
-                            <li className='pl-4 pr-8'><Link to="/pages/servicos" className="text-white hover:text-indigo-200 transition-colors text-2xl">Serviços</Link></li>
-                            <li className='pl-4 pr-8'><Link to="/pages/sobre" className="text-white hover:text-indigo-200 transition-colors text-2xl">Sobre nós</Link></li>
+                            <li className='pl-4 pr-8'><Link to="/pages/home" className={activeLink === "/pages/home" ? "text-white font-bold text-3xl hover:text-indigo-200 transition-colors" : "text-white hover:text-indigo-200 transition-colors text-2xl"}>Home</Link></li>
+                            <li className='pl-4 pr-8'><Link to="/pages/servicos" className={activeLink === "/pages/servicos" ? "text-white font-bold text-3xl hover:text-indigo-200 transition-colors" : "text-white hover:text-indigo-200 transition-colors text-2xl"}>Serviços</Link></li>
+                            <li className='pl-4 pr-8'><Link to="/pages/sobre" className={activeLink === "/pages/sobre" ? "text-white font-bold text-3xl hover:text-indigo-200 transition-colors" : "text-white hover:text-indigo-200 transition-colors text-2xl"}>Sobre nós</Link></li>
                         </ul>
                     </div>
 
@@ -78,9 +87,9 @@ export default function Cabecalho() {
                 className={`${open ? 'block' : 'hidden'} lg:hidden bg-indigo-700 border-t border-white/10`}
             >
                 <ul className="flex flex-col p-4 space-y-4 text-center">
-                    <li><Link to="/" className="text-white block py-2 text-2xl">Home</Link></li>
-                    <li><Link to="/pages/servicos" className="text-white block py-2 text-2xl">Serviços</Link></li>
-                    <li><Link to="/pages/sobre" className="text-white block py-2 text-2xl">Sobre nós</Link></li>
+                    <li><Link to="/pages/home" className={activeLink === "/pages/home" ? "text-white font-bold text-3xl hover:text-indigo-200 transition-colors" : "text-white hover:text-indigo-200 transition-colors text-2xl"}>Home</Link></li>
+                    <li><Link to="/pages/servicos" className={activeLink === "/pages/servicos" ? "text-white font-bold text-3xl hover:text-indigo-200 transition-colors" : "text-white hover:text-indigo-200 transition-colors text-2xl"}>Serviços</Link></li>
+                    <li><Link to="/pages/sobre" className={activeLink === "/pages/sobre" ? "text-white font-bold text-3xl hover:text-indigo-200 transition-colors" : "text-white hover:text-indigo-200 transition-colors text-2xl"}>Sobre nós</Link></li>
                 </ul>
             </div>
         </header>
